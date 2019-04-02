@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(SFML_DIR "SFML-2.5.1/lib/cmake/SFML")
 
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
-add_executable(Space_Adventure main.cpp Obiekty.cpp Pomocnicze.cpp Menu.cpp AI.h AI.cpp)
+add_executable( Space_Adventure main.cpp  Menu.cpp MultiPlayer.cpp Obiekty.cpp Pomocnicze.cpp )
 target_link_libraries(Space_Adventure sfml-graphics sfml-audio)
 
 

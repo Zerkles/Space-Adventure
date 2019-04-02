@@ -34,14 +34,13 @@ int main()
 
     while( okno.isOpen() )
     {
-        cout<<single.getPosition().x<<endl;
         Event event;
         while (okno.pollEvent(event))
         {
             if (event.type == Event::Closed) { okno.close(); }
             else if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape) { okno.close(); }
             else if (event.type == Event::MouseButtonPressed&&czywPolu(single,Mouse::getPosition(okno))) {muzyka.stop(); okno.close(); gra(okno); muzyka.play(); goto reDraw; }
-            else if (event.type == Event::MouseButtonPressed&&czywPolu(multi,Mouse::getPosition(okno))) {muzyka.stop(); okno.close(); menuMulti(okno); muzyka.play(); goto reDraw; }
+            //else if (event.type == Event::MouseButtonPressed&&czywPolu(multi,Mouse::getPosition(okno))) {muzyka.stop(); okno.close(); menuMulti(okno); muzyka.play(); goto reDraw; }
             else if (event.type == Event::MouseButtonPressed&&czywPolu(rdz,Mouse::getPosition(okno))) {okno.close(); winSize=menuRdz(okno); goto reDraw;}
             else if (event.type == Event::MouseButtonPressed&&czywPolu(wyjdz,Mouse::getPosition(okno))){okno.close();}
         }

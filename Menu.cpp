@@ -5,7 +5,7 @@
 #include <afxres.h>
 #include "Pomocnicze.h"
 #include "Obiekty.h"
-#include "AI.h"
+#include "MultiPlayer.h"
 
 
 bool wygrana(RenderWindow &okno)
